@@ -1,0 +1,10 @@
+package com.verizon.amqpdemo.subscriber;
+
+import java.time.LocalDateTime;
+
+public class Consumer {
+	public void listen(LocalDateTime message) throws Exception
+	{
+		System.out.println("Recieved Todays date(yyyy-mm-dd) "+message);
+	}
+}

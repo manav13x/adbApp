@@ -1,0 +1,41 @@
+package com.verizon.mongoDemo.dao;
+
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
+import com.verizon.mongoDemo.model.Item;
+@Repository
+public class ItemDaoImpl  implements ItemDAO{
+
+	@Override
+	public void addItem(Item item) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void removeItem(int iCode) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateItem(Item item) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Item getItem(int iCode) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Item> getItems() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

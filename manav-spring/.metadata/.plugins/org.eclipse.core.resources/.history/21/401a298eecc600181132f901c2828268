@@ -1,0 +1,10 @@
+package com.verizon.amqpdemo.publisher;
+
+public class MyMessagePublisher {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		AbstractApplicationContext ctx = new ClassPathXmlApplicationContext("Beans.xml");
+	}
+
+}

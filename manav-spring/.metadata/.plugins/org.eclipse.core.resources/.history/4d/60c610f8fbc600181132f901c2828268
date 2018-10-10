@@ -1,0 +1,9 @@
+package com.verizon.amqpdemo.subscriber;
+
+public class Consumer {
+	public void listen(String message)
+	{
+		System.out.println("Recieved Todays date(yyyy-mm-dd) "+message.split(" ")[0]);
+		System.out.println("Recieved Todays time(24 Hrs) "+message.split(" ")[1]);
+	}
+}

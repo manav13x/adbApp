@@ -1,0 +1,9 @@
+package com.verizon.mongoDemo.dao;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class ItemMongoRepository  implements MongoRepository<Item, Integer>{
+
+}

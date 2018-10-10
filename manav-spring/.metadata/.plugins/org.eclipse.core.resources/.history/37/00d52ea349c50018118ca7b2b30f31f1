@@ -1,0 +1,18 @@
+package com.verizon.mongoDemo.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.verizon.mongoDemo.dao.ItemMongoRepository;
+import com.verizon.mongoDemo.model.Item;
+
+@Service
+public class ItemServiceImpl implements ItemService {
+
+	
+	@Autowired
+	private ItemMongoRepository itemDAO;
+}

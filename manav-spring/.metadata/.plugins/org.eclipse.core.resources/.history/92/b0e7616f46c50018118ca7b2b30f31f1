@@ -1,0 +1,55 @@
+package com.verizon.mongoDemo.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.verizon.mongoDemo.dao.VehiclesMongoRepository;
+import com.verizon.mongoDemo.model.Vehicles;
+@Service
+public class VehicleServiceImpl implements VehicleService {
+
+	
+	@Autowired
+	private VehiclesMongoRepository itemDAO;
+	
+	@Override
+	public void addVehicles(Vehicles item) {
+		// TODO Auto-generated method stub
+		itemDAO.insert(item);
+	}
+
+	@Override
+	public void removeVehicles(int iCode) {
+		// TODO Auto-generated method stub
+		itemDAO.deleteById(iCode);
+	}
+
+	@Override
+	public void updateVehicles(Vehicles item) {
+		// TODO Auto-generated method stub
+		itemDAO.save(item);
+	}
+
+	@Override
+	public Vehicles getVehicles(int iCode) {
+		// TODO Auto-generated method stub
+		Optional<Vehicles> opt = itemDAO.findById(iCode);
+		return opt.isPresent()?opt.get():null;
+	}
+
+	@Override
+	public List<Vehicles> getVehicless() {
+		// TODO Auto-generated method stub
+		return itemDAO.findAll();
+	}
+
+	@Override
+	public boolean exists(int iCode) {
+		// TODO Auto-generated method stub
+		return itemDAO.existsById(iCode);
+	}
+
+}

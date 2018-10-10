@@ -1,0 +1,5 @@
+package com.verizon.cassendraDemo.model;
+
+public class Item {
+
+}
