@@ -1,0 +1,16 @@
+package com.verizon.amqpdemo.publisher;
+
+import org.springframework.amqp.core.AmqpTemplate;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class MyMessagePublisher {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		AbstractApplicationContext ctx = new ClassPathXmlApplicationContext("Beans.xml");
+		AmqpTemplate template = ctx.getBean(RabbitTemplate.class);
+	}
+
+}

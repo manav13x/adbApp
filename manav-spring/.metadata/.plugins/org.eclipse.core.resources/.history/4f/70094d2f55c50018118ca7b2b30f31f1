@@ -1,0 +1,4 @@
+server.port=7009
+
+spring.data.cassandra.port=
+spring.data.cassandra.

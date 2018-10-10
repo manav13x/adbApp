@@ -1,0 +1,11 @@
+package com.verizon.amqpdemo.subscriber;
+
+import java.text.SimpleDateFormat;
+
+public class Consumer {
+	public void listen(String message) throws Exception
+	{
+		System.out.println("Recieved Todays date(yyyy-mm-dd) "+new SimpleDateFormat("yyyy/MM/dd").parse(message.split(" ")[0]));
+		System.out.println("Recieved Todays time(24 Hrs) "+message.split(" ")[1]);
+	}
+}

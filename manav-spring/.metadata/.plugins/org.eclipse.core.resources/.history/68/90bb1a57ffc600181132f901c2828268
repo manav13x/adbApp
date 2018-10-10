@@ -1,0 +1,15 @@
+package com.verizon.amqpdemo.subscriber;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class Consumer {
+	public void listen(LocalDateTime message) throws Exception
+	{
+		DateTimeFormatter format = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+		String mes = format.format(message).toString();
+		System.out.println("Recieved "+LocalDateTime.parse(mes,format));
+		
+	}
+}

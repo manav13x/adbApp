@@ -1,0 +1,15 @@
+package com.verizon.amqpdemo.subscriber;
+
+import java.sql.Date;
+import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
+public class Consumer {
+	public void listen(String message) throws Exception
+	{
+		DateTimeFormatter formatter = DateTimeFormat.ofPattern("yyyy-MM-dd HH:mm:ss");
+		Date dt = formatter.parseDateTime(message);
+	}
+}

@@ -1,0 +1,5 @@
+package com.verizon.cassendraDemo.dao;
+
+public interface CassendraRepo {
+
+}
